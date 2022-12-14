@@ -1,7 +1,7 @@
 import NoteItem from '../../components/NoteItem/NoteItem'
 import { useState, useEffect } from 'react';
 import * as notesAPI from "../../utilities/notes-api"
-
+import './NotesPage.css'
 export default function NotesPage({ user }) {
   const [notes, setNotes] = useState([]);
 
@@ -37,7 +37,7 @@ export default function NotesPage({ user }) {
   return (
     <>
       {noteItems.length ? 
-        {noteItems}
+        <div>{noteItems}</div>
         :
         <span>No notes yet</span>
       }
